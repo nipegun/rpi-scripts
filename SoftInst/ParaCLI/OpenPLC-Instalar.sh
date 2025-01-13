@@ -6,13 +6,13 @@
 # No tienes que aceptar ningún tipo de términos de uso o licencia para utilizarlo o modificarlo porque va sin CopyLeft.
 
 # ----------
-# Script de NiPeGun para instalar OpenPLCRuntime en Debian
+# Script de NiPeGun para instalar OpenPLC en Raspberry Pi OS
 #
 # Ejecución remota:
-#   curl -sL https://raw.githubusercontent.com/nipegun/rpi-scripts/refs/heads/main/SoftInst/ParaCLI/OpenPLCRuntime-Instalar.sh | bash
+#   curl -sL https://raw.githubusercontent.com/nipegun/rpi-scripts/refs/heads/main/SoftInst/ParaCLI/OpenPLC-Instalar.sh | bash
 #
 # Bajar y editar directamente el archivo en nano
-#   curl -sL https://raw.githubusercontent.com/nipegun/rpi-scripts/refs/heads/main/SoftInst/ParaCLI/OpenPLCRuntime-Instalar.sh | nano -
+#   curl -sL https://raw.githubusercontent.com/nipegun/rpi-scripts/refs/heads/main/SoftInst/ParaCLI/OpenPLC-Instalar.sh | nano -
 # ----------
 
 # Definir constantes de color
@@ -49,7 +49,7 @@
   if [ $cVerSO == "13" ]; then
 
     echo ""
-    echo -e "${cColorAzulClaro}  Iniciando el script de instalación de OpenPLCRuntime para Debian 13 (x)...${cFinColor}"
+    echo -e "${cColorAzulClaro}  Iniciando el script de instalación de OpenPLC para Debian 13 (x)...${cFinColor}"
     echo ""
 
     echo ""
@@ -59,7 +59,7 @@
   elif [ $cVerSO == "12" ]; then
 
     echo ""
-    echo -e "${cColorAzulClaro}  Iniciando el script de instalación de OpenPLCRuntime para Debian 12 (Bookworm)...${cFinColor}"
+    echo -e "${cColorAzulClaro}  Iniciando el script de instalación de OpenPLC para Debian 12 (Bookworm)...${cFinColor}"
     echo ""
 
     # Crear el menú
@@ -74,9 +74,9 @@
         fi
       menu=(dialog --checklist "Marca como quieres instalar la herramienta:" 22 70 16)
         opciones=(
-          1 "Clonar el repo de OpenPLCRuntime"  on
-          2 "Ejecutar el script de instalación" on
-          3 "Ejecutar el software"              on
+          1 "Clonar el repo de OpenPLC"           on
+          2 "  Ejecutar el script de instalación" on
+          3 "  Ejecutar OpenPLC"                  on
         )
       choices=$("${menu[@]}" "${opciones[@]}" 2>&1 >/dev/tty)
 
@@ -136,7 +136,7 @@
   elif [ $cVerSO == "11" ]; then
 
     echo ""
-    echo -e "${cColorAzulClaro}  Iniciando el script de instalación de OpenPLCRuntime para Debian 11 (Bullseye)...${cFinColor}"
+    echo -e "${cColorAzulClaro}  Iniciando el script de instalación de OpenPLC para Debian 11 (Bullseye)...${cFinColor}"
     echo ""
 
     echo ""
@@ -146,7 +146,7 @@
   elif [ $cVerSO == "10" ]; then
 
     echo ""
-    echo -e "${cColorAzulClaro}  Iniciando el script de instalación de OpenPLCRuntime para Debian 10 (Buster)...${cFinColor}"
+    echo -e "${cColorAzulClaro}  Iniciando el script de instalación de OpenPLC para Debian 10 (Buster)...${cFinColor}"
     echo ""
 
     echo ""
@@ -156,7 +156,7 @@
   elif [ $cVerSO == "9" ]; then
 
     echo ""
-    echo -e "${cColorAzulClaro}  Iniciando el script de instalación de OpenPLCRuntime para Debian 9 (Stretch)...${cFinColor}"
+    echo -e "${cColorAzulClaro}  Iniciando el script de instalación de OpenPLC para Debian 9 (Stretch)...${cFinColor}"
     echo ""
 
     echo ""
@@ -166,7 +166,7 @@
   elif [ $cVerSO == "8" ]; then
 
     echo ""
-    echo -e "${cColorAzulClaro}  Iniciando el script de instalación de OpenPLCRuntime para Debian 8 (Jessie)...${cFinColor}"
+    echo -e "${cColorAzulClaro}  Iniciando el script de instalación de OpenPLC para Debian 8 (Jessie)...${cFinColor}"
     echo ""
 
     echo ""
@@ -176,7 +176,7 @@
   elif [ $cVerSO == "7" ]; then
 
     echo ""
-    echo -e "${cColorAzulClaro}  Iniciando el script de instalación de OpenPLCRuntime para Debian 7 (Wheezy)...${cFinColor}"
+    echo -e "${cColorAzulClaro}  Iniciando el script de instalación de OpenPLC para Debian 7 (Wheezy)...${cFinColor}"
     echo ""
 
     echo ""
