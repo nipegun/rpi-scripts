@@ -79,6 +79,17 @@
       #curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered | sudo bash
       echo -e "Y" | bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
 
+    # Hacer que se ejecute al inicio del sistema operativo
+      sudo systemctl enable nodered.service
+
+    # Notificar fin de ejecución del script
+      echo ""
+      echo "  Ejecución del script, finalizada. Para conectarte a la web:"
+      echo ""
+      vIPLocal=$(hostname -I | sed 's- --g')
+      echo "    http://$vIPLocal:1880"
+      echo ""
+
   elif [ $cVerSO == "11" ]; then
 
     echo ""
