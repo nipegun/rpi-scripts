@@ -6,7 +6,7 @@
 # No tienes que aceptar ningún tipo de términos de uso o licencia para utilizarlo o modificarlo porque va sin CopyLeft.
 
 # ----------
-# Script de NiPeGun para instalar y configurar NodeRED en Debian
+# Script de NiPeGun para instalar y configurar NodeRED en Raspberry Pi OS
 #
 # Ejecución remota (puede requerir permisos sudo):
 #   curl -sL https://raw.githubusercontent.com/nipegun/rpi-scripts/refs/heads/main/SoftInst/ParaCLI/NodeRED-Instalar.sh | bash
