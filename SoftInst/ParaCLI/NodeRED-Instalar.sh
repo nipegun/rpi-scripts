@@ -79,8 +79,12 @@
       #curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered | sudo bash
       echo -e "Y" | bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
 
-    # Hacer que se ejecute al inicio del sistema operativo
-      sudo systemctl enable nodered.service
+    # Activar e iniciar el servicio
+      sudo systemctl enable nodered.service --now
+
+    # Comprobar estado del servicio
+      sleep 5
+      sudo systemctl status nodered.service --no-pager
 
     # Notificar fin de ejecución del script
       echo ""
