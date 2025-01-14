@@ -86,6 +86,12 @@
       sleep 5
       sudo systemctl status nodered.service --no-pager
 
+    # Agregar
+      cd ~/.node-red
+      npm install node-red-node-pi-gpio
+      # Reiniciar
+        node-red-restart
+
     # Notificar fin de ejecución del script
       echo ""
       echo "  Ejecución del script, finalizada. Para conectarte a la web:"
